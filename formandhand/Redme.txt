@@ -1,0 +1,46 @@
+Form validation in react
+*using useState hooks
+    ->useState for monitoring dynamic change for content
+
+    const[user,setUser]=useState({
+        name:"kaviya",
+        age:20,
+        gender:"female",
+        marrital:false,
+        country:"india",
+        bio:"write something about yourself",
+    });
+
+    **this are the set the values for user 
+    **this like initial value and set the objects
+
+
+    function handler(e) {
+        const name=e.target.name;
+        const value=e.target.type==="checkbox"?e.target.checked:e.target.value;
+        setUser({...user,[name]:value});
+    }
+
+    **(e) object set the function 
+    **set the variable from form name and use the ternary operator for check the condition
+    **sperad opertor used for collect the value from useState
+
+
+*table 
+    -> showing or display user given content
+*Form
+    ->collect input from user
+    ->using onchange() for monitoring content 
+
+1. name
+    => get name from user as String type
+2. age
+    => get age from user as number(integer) type
+3.gender 
+    => get gender for radio button type
+    i)male
+    ii)female
+4.marital status
+    =>marrital status is created by select option(married/unmarried)
+5.country
+    =>select the country from given option(india/usa/uk)
